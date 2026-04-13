@@ -1,14 +1,12 @@
 Programación III: Proyecto Final (2026-1)
 Integrantes 
 
--Sandra Sofia Alvarez Lovera 
--Denilson Jermai Cuadros Villegas 
--Marcelo Daniel Castillo Escudero 
--Santiago Sebastian Davila Bazan
--Enrique Eusebio Torres Chafloque: 
+- Sandra Sofia Alvarez Lovera
+- Denilson Jermai Cuadros Villegas
+- Marcelo Daniel Castillo Escudero
+- Santiago Sebastian Davila Bazan
+- Enrique Eusebio Torres Chafloque
 
-Nombre y Apellidos
-Nombre y Apellidos
 El siguiente texto debe ser eliminar en su repositorio.
 
 Plataforma de Streaming
