@@ -1,15 +1,17 @@
-Programación III: Proyecto Final (2026-1)
-Integrantes 
+# Programación III: Proyecto Final (2026-1)
 
+---
+## Integrantes:
 - Sandra Sofia Alvarez Lovera
 - Denilson Jermai Cuadros Villegas
 - Marcelo Daniel Castillo Escudero
 - Santiago Sebastian Davila Bazan
 - Enrique Eusebio Torres Chafloque
 
-El siguiente texto debe ser eliminar en su repositorio.
+---
 
-Plataforma de Streaming
+## Plataforma de Streaming
+
 El objetivo del proyecto final es implementar una plataforma de streaming. Un programa que administre la búsqueda y visualización de la sinopsis de películas. Para ello se debe implementar las siguientes operaciones:
 
 El programa debe leer la base de datos en forma .csv. La base de datos puede ser descargada desde el siguiente [link] (https://drive.google.com/file/d/1UJkRuCF8UD92W_DT7S8dXCYzaR_9wqB_/view?usp=sharing). El grupo es responsable del pre-procesamiento de los datos.
