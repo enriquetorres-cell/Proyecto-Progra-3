@@ -1,0 +1,37 @@
+FUNCIÓN buscar(consulta, trie, ngram_index) → lista_ids:
+  consulta = normalizar(consulta)
+  palabras = tokenizar(consulta)
+  ids_acumulados = {}
+
+  PARA CADA palabra EN palabras:
+
+    // Caso 1: tag especial → "tag:horror", "director:nolan"
+    SI palabra contiene ":":
+      ids = trie.buscar_exacto(palabra)
+
+    // Caso 2: palabra de 3 letras o más
+    SINO SI len(palabra) >= 3:
+      ids = trie.buscar_exacto(palabra)
+      ids += trie.buscar_por_prefijo(palabra)
+      ids += ngram_index.buscar(palabra)
+
+    // Caso 3: palabra de 2 letras → "it", "up", "us"
+    SINO SI len(palabra) == 2:
+      ids = ngram_index.buscar(palabra)
+
+    // Caso 4: 1 letra → ignorar
+    SINO:
+      CONTINUAR
+
+    ids_acumulados.unir(ids)
+
+  RETORNAR rankear(ids_acumulados, palabras)
+
+FUNCIÓN buscar_por_prefijo(trie, prefijo) → lista_ids:
+    nodo = raiz
+    PARA CADA caracter EN prefijo:
+        SI caracter NO en nodo.hijos: RETORNAR []
+        nodo = nodo.hijos[caracter]
+
+    // DFS desde aquí para recoger todos los IDs del subárbol
+    RETORNAR dfs_recoger_ids(nodo)
