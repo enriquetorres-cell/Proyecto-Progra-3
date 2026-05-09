@@ -1,0 +1,19 @@
+FUNCIÓN rankear(ids, palabras_buscadas, usuario_activo):
+    scores = {}
+
+    PARA CADA id EN ids:
+        pelicula = catalogo.getPelicula(id)
+        pts = 0
+
+        PARA CADA palabra EN palabras_buscadas:
+            SI palabra EN pelicula.titulo:     pts += 3
+            SI palabra EN pelicula.director:   pts += 2
+            SI palabra EN pelicula.sinopsis:   pts += 1
+
+
+        SI pelicula comparte_genero_con likes_usuario: pts += 2
+        pts = pts * (pelicula.score / 10.0)
+        scores[id] = pts
+
+    ORDENAR ids POR scores[id] DESCENDENTE
+    RETORNAR ids  // mostrar de 5 en 5
