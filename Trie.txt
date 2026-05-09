@@ -1,0 +1,56 @@
+FUNCIÓN cargarCatalogo(archivo_csv, trie, catalogo):
+    PARA CADA linea EN leer_csv(archivo_csv):
+        pelicula = parsear(linea)
+        catalogo.agregar(pelicula)
+
+        tokens = tokenizar(pelicula.titulo + " " + pelicula.sinopsis)
+        PARA CADA token EN tokens:
+            token = normalizar(token)  // lowercase, sin tildes
+            SI token NO es stopword:
+                trie.insertar(token, pelicula.id)
+
+                // N-grama para substring: "barco" → "bar","arc","rco"
+                PARA i=0 MIENTRAS i+3<= len(token):
+                    ngrama = token[i..i+3]
+                    ngram_index.insertar(ngrama, pelicula.id)
+                    i++
+
+         // Insertar tags especiales
+         trie.insertar("director:" + normalizar(pelicula.director), pelicula.id)
+
+         PARA CADA genero EN pelicula.generos:
+         trie.insertar("tag:" + normalizar(genero), pelicula.id)
+
+FUNCIÓN insertar(trie, palabra, movie_id):
+
+  // Validar entrada
+  SI palabra == "" O palabra == nulo:
+    RETORNAR
+
+  nodo_actual = raiz
+  i = 0
+
+  PARA i=0 MIENTRAS i < len(palabra):
+    caracter = palabra[i]
+
+    SI caracter NO existe en nodo_actual.hijos:
+      nodo_actual.hijos[caracter] = nuevo_nodo()
+
+    nodo_actual = nodo_actual.hijos[caracter]
+    i++
+
+  nodo_actual.es_fin = verdadero
+   SI movie_id NO está en nodo_actual.movie_ids:
+   nodo_actual.movie_ids.agregar(movie_id)
+  FUNCIÓN insertar(trie, palabra, movie_id):
+   nodo_actual = raiz
+
+   PARA CADA caracter EN palabra:
+   SI caracter NO existe en nodo_actual.hijos:
+   nodo_actual.hijos[caracter] = nuevo_nodo()
+   nodo_actual = nodo_actual.hijos[caracter]
+
+   nodo_actual.es_fin = verdadero
+
+   SI movie_id NO está en nodo_actual.movie_ids:
+   nodo_actual.movie_ids.agregar(movie_id)
