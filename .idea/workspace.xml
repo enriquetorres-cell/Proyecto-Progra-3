@@ -54,6 +54,11 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
+    ]
   }
 }]]></component>
   <component name="TaskManager">
@@ -68,7 +73,7 @@
       <workItem from="1776699144761" duration="4905000" />
       <workItem from="1777303273972" duration="2626000" />
       <workItem from="1777501116992" duration="587000" />
-      <workItem from="1778296790955" duration="1746000" />
+      <workItem from="1778296790955" duration="2431000" />
     </task>
     <servers />
   </component>
