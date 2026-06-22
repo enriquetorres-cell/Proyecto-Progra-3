@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/index)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/search)
 # Fuentes comunes (foundation + paquete 3 + paquete 2)
 set(COMMON_SOURCES
         dataframe.cpp
@@ -56,4 +57,19 @@ add_executable(test_usuarios
 # ============================================================
 add_executable(test_lectura
         Prueba_lectura.cpp
+)
+
+# ============================================================
+# 5) Tests del Paquete 4 (Busqueda + Ranking + Composite)
+#    Ejecutar:   ./test_busqueda
+# ============================================================
+set(SEARCH_SOURCES
+        search/Query.cpp
+        search/Ranker.cpp
+        search/Buscador.cpp
+)
+add_executable(test_busqueda
+        search/main_test_busqueda.cpp
+        ${SEARCH_SOURCES}
+        ${COMMON_SOURCES}
 )

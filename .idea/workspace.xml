@@ -22,6 +22,7 @@
       <config projectName="Proyecto_Progra_3" targetName="test_indices" />
       <config projectName="Proyecto_Progra_3" targetName="test_usuarios" />
       <config projectName="Proyecto_Progra_3" targetName="Proyecto_Progra_3" />
+      <config projectName="Proyecto_Progra_3" targetName="test_busqueda" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -31,10 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GestionUsuarios.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GestionUsuarios.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestingUsuarios.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_usuarios_main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
@@ -50,10 +48,76 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="S2" />
+        <entry key="$PROJECT_DIR$" value="San4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="5YZq8Ase" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000294780394199" />
+      <entry key="MS500" value="1.132038462332185" />
+      <entry key="S2" value="2.4323529638742203" />
+      <entry key="S5" value="4.215026935385929" />
+      <entry key="S10" value="5.356534794894965" />
+      <entry key="S30" value="6.38338270099311" />
+      <entry key="S60" value="6.682115291069942" />
+      <entry key="M2" value="6.838583242103042" />
+      <entry key="M5" value="6.935504174136515" />
+      <entry key="M10" value="7.151729527536769" />
+      <entry key="M15" value="8.178036662543786" />
+      <entry key="M30" value="14.806344451622792" />
+      <entry key="H1" value="26.958180575770914" />
+      <entry key="H2" value="38.90433831669879" />
+      <entry key="H4" value="47.3375339245259" />
+      <entry key="D1" value="56.04482416178117" />
+      <entry key="W1" value="57.71598741778906" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.0248212294611586E-4" />
+      <entry key="MS500" value="0.21276231942825732" />
+      <entry key="S2" value="1.765977710057654" />
+      <entry key="S5" value="3.790099012365398" />
+      <entry key="S10" value="5.097940885528576" />
+      <entry key="S30" value="6.283833270961842" />
+      <entry key="S60" value="6.630429206893501" />
+      <entry key="M2" value="6.8122419726455155" />
+      <entry key="M5" value="6.924845353490358" />
+      <entry key="M10" value="7.146375647945943" />
+      <entry key="M15" value="8.174448413157943" />
+      <entry key="M30" value="14.8045006059491" />
+      <entry key="H1" value="26.95721426956401" />
+      <entry key="H2" value="38.90383340631825" />
+      <entry key="H4" value="47.33727379028253" />
+      <entry key="D1" value="56.044779484297734" />
+      <entry key="W1" value="57.715980999043666" />
+    </decayedShown>
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -87,7 +151,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "San4",
+    "git-widget-placeholder": "d2",
     "last_opened_file_path": "C:/Users/tenri/Documents/proyPr3/Proyecto-Progra-3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -114,6 +178,11 @@
       </method>
     </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_busqueda" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="test_busqueda" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="test_busqueda">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -149,6 +218,7 @@
       <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
       <item itemvalue="C/C++ File.main.cpp" />
       <item itemvalue="CMake Application.Proyecto_Progra_3" />
+      <item itemvalue="CMake Application.test_busqueda" />
       <item itemvalue="CMake Application.test_indices" />
       <item itemvalue="CMake Application.test_lectura" />
       <item itemvalue="CMake Application.test_usuarios" />
