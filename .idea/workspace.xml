@@ -5,10 +5,11 @@
   </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
@@ -17,6 +18,8 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="Proyecto_Progra_3" targetName="test_lectura" />
+      <config projectName="Proyecto_Progra_3" targetName="test_indices" />
       <config projectName="Proyecto_Progra_3" targetName="Proyecto_Progra_3" />
     </generated>
   </component>
@@ -27,18 +30,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prueba_lectura.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataframe.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataframe.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/palabras_despreciables.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokenizador.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokenizador.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/Indexador.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/Indexador.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/Ngramindex.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/Ngramindex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/Testing.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/Trie.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/Trie.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/main_test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Catalogo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Catalogo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sesion.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sesion.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario.h" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +54,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="S2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectApplicationVersion">
@@ -62,6 +71,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="3CJGcJ6JLPtAKOQuOQJgZY72BFv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -81,8 +93,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "d1",
-    "last_opened_file_path": "C:/Users/Usuario/Desktop/Pogramación III/Proyecto-Progra-3",
+    "git-widget-placeholder": "8-t6",
+    "last_opened_file_path": "C:/Users/tenri/Documents/proyPr3/Proyecto-Progra-3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -112,6 +124,16 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test_indices" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="test_indices" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="test_indices">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_lectura" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="test_lectura" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="test_lectura">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Prueba_lectura.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="Prueba_lectura.cpp" CONFIG_NAME="Prueba_lectura.cpp">
       <option name="sourceFile" value="Prueba_lectura.cpp" />
       <method v="2">
@@ -128,9 +150,13 @@
       <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
       <item itemvalue="C/C++ File.main.cpp" />
       <item itemvalue="CMake Application.Proyecto_Progra_3" />
+      <item itemvalue="CMake Application.test_indices" />
+      <item itemvalue="CMake Application.test_lectura" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="C/C++ File.main.cpp" />
+        <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
         <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
         <item itemvalue="C/C++ File.main.cpp" />
       </list>
@@ -151,6 +177,8 @@
       <workItem from="1778296790955" duration="3320000" />
       <workItem from="1778300175621" duration="10000" />
       <workItem from="1778300201256" duration="1187000" />
+      <workItem from="1782085847235" duration="6000" />
+      <workItem from="1782085869123" duration="1941000" />
     </task>
     <servers />
   </component>
@@ -159,5 +187,10 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.exe" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
 </project>
