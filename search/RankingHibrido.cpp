@@ -1,9 +1,8 @@
-#include "Ranker.h"
+#include "RankingHibrido.h"
 #include <algorithm>
 
-Ranker::Ranker(const Catalogo& cat) : catalogo(cat) {}
+RankingHibrido::RankingHibrido(const Catalogo& cat) : RankingStrategy(cat) {}
 
-// Pasa un texto a minusculas para comparar sin importar mayusculas.
 static string aMinusculas(const string& s) {
     string r;
     r.reserve(s.size());
@@ -11,22 +10,20 @@ static string aMinusculas(const string& s) {
     return r;
 }
 
-// true si 'aguja' aparece como substring dentro de 'texto'.
 static bool contiene(const string& texto, const string& aguja) {
     if (aguja.empty()) return false;
     return texto.find(aguja) != string::npos;
 }
 
-vector<int> Ranker::rankear(const set<int>& ids,
-                            const vector<string>& palabras,
-                            const Usuario* usuario) const {
-    // Generos que el usuario ha marcado con like (vacio si no hay sesion).
+vector<int> RankingHibrido::rankear(const set<int>& ids,
+                                    const vector<string>& palabras,
+                                    const Usuario* usuario) const {
     const map<string, int>* favoritos = nullptr;
     if (usuario != nullptr) {
         favoritos = &usuario->getHistorial()->getGenerosFavoritos();
     }
 
-    vector<pair<int, double>> conPuntaje;   // (id, score)
+    vector<pair<int, double>> conPuntaje;
     conPuntaje.reserve(ids.size());
 
     for (int id : ids) {
@@ -43,20 +40,15 @@ vector<int> Ranker::rankear(const set<int>& ids,
             if (contiene(director, palabra)) pts += 2;
             if (contiene(sinopsis, palabra)) pts += 1;
         }
-
-        // +2 si comparte algun genero con los likes del usuario.
         if (favoritos != nullptr) {
             for (const string& g : peli->genres) {
                 if (favoritos->count(g)) { pts += 2; break; }
             }
         }
 
-        // Nota: Ranking.txt multiplica por (pelicula.score / 10). Movie no
-        // expone un campo 'score', asi que ese factor se omite aqui.
         conPuntaje.push_back({id, pts});
     }
 
-    // Orden descendente por puntaje (estable: empate -> id menor primero).
     stable_sort(conPuntaje.begin(), conPuntaje.end(),
                 [](const pair<int, double>& a, const pair<int, double>& b) {
                     return a.second > b.second;
@@ -65,5 +57,4 @@ vector<int> Ranker::rankear(const set<int>& ids,
     vector<int> ordenados;
     ordenados.reserve(conPuntaje.size());
     for (const auto& par : conPuntaje) ordenados.push_back(par.first);
-    return ordenados;
-}
+    return ordenados;}

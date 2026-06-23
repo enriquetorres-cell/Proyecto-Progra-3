@@ -21,8 +21,8 @@
       <config projectName="Proyecto_Progra_3" targetName="test_lectura" />
       <config projectName="Proyecto_Progra_3" targetName="test_indices" />
       <config projectName="Proyecto_Progra_3" targetName="test_usuarios" />
-      <config projectName="Proyecto_Progra_3" targetName="Proyecto_Progra_3" />
       <config projectName="Proyecto_Progra_3" targetName="test_busqueda" />
+      <config projectName="Proyecto_Progra_3" targetName="Proyecto_Progra_3" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -32,9 +32,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Recomendador.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recomendador.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/AfinidadConLikes.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/AfinidadConLikes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/RankingStrategy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/RelevanciaTextual.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/RelevanciaTextual.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/Buscador.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/search/Buscador.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/Buscador.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/Buscador.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/Query.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/Query.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/Ranker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/search/RankingHibrido.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/Ranker.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/RankingHibrido.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/TestingBusqueda.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/TestingBusqueda.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,13 +164,17 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "d2",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "M3",
+    "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/tenri/Documents/proyPr3/Proyecto-Progra-3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -171,13 +188,13 @@
       <recent name="C:\Users\Usuario\Desktop\Pogramación III\Proyecto-Progra-3" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.Prueba_lectura.cpp">
-    <configuration name="Proyecto_Progra_3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="Proyecto_Progra_3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="Proyecto_Progra_3">
+  <component name="RunManager" selected="C/C++ File.main.cpp">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Proyecto_Progra_3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="Proyecto_Progra_3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="Proyecto_Progra_3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -250,6 +267,7 @@
       <workItem from="1782085847235" duration="6000" />
       <workItem from="1782085869123" duration="1941000" />
       <workItem from="1782093142288" duration="6361000" />
+      <workItem from="1782196725580" duration="11710000" />
     </task>
     <servers />
   </component>

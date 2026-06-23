@@ -4,27 +4,23 @@
 #include "../Catalogo.h"
 #include "../Usuario.h"
 #include "../index/Trie.h"
-#include "../index/NgramIndex.h"
-#include "Ranker.h"
+#include "../index/Ngramindex.h"
+#include "RankingStrategy.h"
 #include <vector>
 #include <string>
 using namespace std;
 
-// ============================================================
-// Buscador (Busqueda.txt)
-// ------------------------------------------------------------
-// Punto de entrada de la busqueda. Construye un arbol de Query
-// a partir de la consulta del usuario (Composite), lo evalua
-// sobre los indices y devuelve los ids ya rankeados.
-// ============================================================
 class Buscador {
-    const Catalogo&   catalogo;
-    const Trie&       trie;
-    const NgramIndex& ngram;
-    Ranker            ranker;
+    const Catalogo&        catalogo;
+    const Trie&            trie;
+    const NgramIndex&      ngram;
+    const RankingStrategy& strategy;   // Strategy: ranking intercambiable
 
 public:
-    Buscador(const Catalogo& cat, const Trie& trie, const NgramIndex& ngram);
+    Buscador(const Catalogo& cat,
+             const Trie& trie,
+             const NgramIndex& ngram,
+             const RankingStrategy& strategy);
 
     // 'usuario' puede ser nullptr (busqueda sin sesion activa).
     vector<int> buscar(const string& consulta, const Usuario* usuario) const;

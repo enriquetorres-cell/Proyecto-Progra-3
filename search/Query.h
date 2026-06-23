@@ -2,7 +2,7 @@
 #define PROYECTO_PROGRA_3_QUERY_H
 
 #include "../index/Trie.h"
-#include "../index/NgramIndex.h"
+#include "../index/Ngramindex.h"
 #include <set>
 #include <vector>
 #include <string>

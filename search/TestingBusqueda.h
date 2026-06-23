@@ -2,7 +2,7 @@
 #define PROYECTO_PROGRA_3_TESTINGBUSQUEDA_H
 
 #include "Query.h"
-#include "Ranker.h"
+#include "RankingHibrido.h"
 #include "Buscador.h"
 #include "../index/Indexador.h"
 #include "../Catalogo.h"
@@ -83,7 +83,7 @@ inline void testQueriesComposite() {
 // 2) Ranker: titulo (+3) pesa mas que sinopsis (+1); bonus por genero con like.
 inline void testRanker() {
     Catalogo cat; cargarCatalogoMini(cat);
-    Ranker ranker(cat);
+    RankingHibrido ranker(cat);
 
     // "the godfather" tiene "godfather" en el titulo (peli 2).
     // "interstellar" no contiene esa palabra -> peli 2 debe ir primero.
@@ -106,7 +106,8 @@ inline void testBuscadorEndToEnd() {
     Catalogo cat; cargarCatalogoMini(cat);
     Trie trie; NgramIndex ngram(3);
     Indexador::indexar(cat, trie, ngram, stopwordsMini(), true);
-    Buscador buscador(cat, trie, ngram);
+    RankingHibrido strategy(cat);
+    Buscador buscador(cat, trie, ngram, strategy);
 
     // Busqueda normal por palabra del titulo.
     auto r1 = buscador.buscar("interstellar", nullptr);
