@@ -31,24 +31,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Recomendador.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recomendador.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search/AfinidadConLikes.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search/AfinidadConLikes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search/RankingStrategy.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search/RelevanciaTextual.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search/RelevanciaTextual.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/Buscador.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/search/Buscador.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/Buscador.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/Buscador.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/Query.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/Query.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/Ranker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/search/RankingHibrido.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/Ranker.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/RankingHibrido.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/TestingBusqueda.h" beforeDir="false" afterPath="$PROJECT_DIR$/search/TestingBusqueda.h" afterDir="false" />
-    </list>
+    <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,7 +250,7 @@
       <workItem from="1782085847235" duration="6000" />
       <workItem from="1782085869123" duration="1941000" />
       <workItem from="1782093142288" duration="6361000" />
-      <workItem from="1782196725580" duration="11710000" />
+      <workItem from="1782196725580" duration="11988000" />
     </task>
     <servers />
   </component>

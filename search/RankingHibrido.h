@@ -10,15 +10,7 @@
 #include "RankingStrategy.h"
 using namespace std;
 
-// ============================================================
-// Ranker (Ranking.txt)
-// ------------------------------------------------------------
-// Ordena los ids resultantes de una busqueda por relevancia:
-//   +3 si la palabra aparece en el titulo
-//   +2 si aparece en el director
-//   +1 si aparece en la sinopsis (plot)
-//   +2 extra si la pelicula comparte genero con los likes del usuario
-// ============================================================
+
 class RankingHibrido: public RankingStrategy {
 public:
     explicit RankingHibrido(const Catalogo& cat);
