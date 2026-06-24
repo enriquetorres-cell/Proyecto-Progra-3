@@ -3,7 +3,7 @@
  
 #include "../Catalogo.h"
 #include "Trie.h"
-#include "NgramIndex.h"
+#include "Ngramindex.h"
 #include <vector>
 #include <string>
  

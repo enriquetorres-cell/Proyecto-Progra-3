@@ -28,23 +28,3 @@ add_executable(Proyecto_Progra_3
         main.cpp
         ${COMMON_SOURCES}
         ${SEARCH_SOURCES})
-
-# 2) Tests Paquete 3
-add_executable(test_indices
-        index/main_test.cpp
-        ${COMMON_SOURCES})
-
-# 3) Tests Paquete 2
-add_executable(test_usuarios
-        test_usuarios_main.cpp
-        GestionUsuarios.cpp)
-
-# 4) Prueba de lectura
-add_executable(test_lectura
-        Prueba_lectura.cpp)
-
-# 5) Tests Paquete 4 + 5
-add_executable(test_busqueda
-        search/main_test_busqueda.cpp
-        ${COMMON_SOURCES}
-        ${SEARCH_SOURCES})

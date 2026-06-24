@@ -1,4 +1,4 @@
-#include "NgramIndex.h"
+#include "Ngramindex.h"
 #include <algorithm>
 #include <iterator>
  
