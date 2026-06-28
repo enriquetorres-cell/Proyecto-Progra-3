@@ -18,10 +18,6 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Proyecto_Progra_3" targetName="test_lectura" />
-      <config projectName="Proyecto_Progra_3" targetName="test_indices" />
-      <config projectName="Proyecto_Progra_3" targetName="test_usuarios" />
-      <config projectName="Proyecto_Progra_3" targetName="test_busqueda" />
       <config projectName="Proyecto_Progra_3" targetName="Proyecto_Progra_3" />
     </generated>
   </component>
@@ -33,20 +29,11 @@
   <component name="ChangeListManager">
     <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prueba_lectura.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prueba_lectura.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestingUsuarios.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataframe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dataframe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/Indexador.h" beforeDir="false" afterPath="$PROJECT_DIR$/index/Indexador.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/Ngramindex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/index/Ngramindex.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/Testing.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/main_test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionUsuarios.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GestionUsuarios.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recomendador.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Recomendador.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recomendador.h" beforeDir="false" afterPath="$PROJECT_DIR$/Recomendador.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsuarioHistorial.h" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioHistorial.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/TestingBusqueda.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/main_test_busqueda.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_usuarios_main.cpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,41 +135,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "C/C++ File.main.cpp.executor": "Run",
-    "CMake Application.Proyecto_Progra_3.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "M3",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/marce/Proyecto-Progra-3/cmake-build-debug",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Proyecto_Progra_3.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;M3&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marce/Proyecto-Progra-3/cmake-build-debug&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marce\Proyecto-Progra-3\cmake-build-debug" />
@@ -192,32 +179,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Proyecto_Progra_3">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Proyecto_Progra_3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="Proyecto_Progra_3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="Proyecto_Progra_3">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_busqueda" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="test_busqueda" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="test_busqueda">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_indices" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="test_indices" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="test_indices">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_lectura" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="test_lectura" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="test_lectura">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_usuarios" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="test_usuarios" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="test_usuarios">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -238,10 +205,6 @@
       <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
       <item itemvalue="C/C++ File.main.cpp" />
       <item itemvalue="CMake Application.Proyecto_Progra_3" />
-      <item itemvalue="CMake Application.test_busqueda" />
-      <item itemvalue="CMake Application.test_indices" />
-      <item itemvalue="CMake Application.test_lectura" />
-      <item itemvalue="CMake Application.test_usuarios" />
     </list>
     <recent_temporary>
       <list>
@@ -271,7 +234,8 @@
       <workItem from="1782085869123" duration="1941000" />
       <workItem from="1782093142288" duration="6361000" />
       <workItem from="1782196725580" duration="13674000" />
-      <workItem from="1782339670595" duration="3799000" />
+      <workItem from="1782339670595" duration="6405000" />
+      <workItem from="1782656412536" duration="4026000" />
     </task>
     <servers />
   </component>

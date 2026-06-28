@@ -44,17 +44,14 @@ void movieDetails(int movieId);
 
 static void limpiarBufferEntrada() {
     cin.clear();
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-}
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');}
 
 static int leerOpcion() {
     int opcion;
     if (!(cin >> opcion)) {
         limpiarBufferEntrada();
-        return -1;
-    }
-    return opcion;
-}
+        return -1;}
+    return opcion;}
 
 
 void loadingScreen() {
@@ -191,6 +188,11 @@ void movieDetails(int movieId) {
         home();
         return;}
 
+    Usuario* activo = g_sesion.getActivo();
+    if (activo != nullptr) {
+        activo->getHistorial()->registrarVista(movieId);
+        g_gestion.guardarEnArchivo();}
+
     cout << "-----------------------------------------------------------------------------------------------------\n"
          << "Titulo:   " << peli->title << " (" << peli->releaseYear << ")\n"
          << "Director: " << peli->director << "\n"
@@ -296,8 +298,11 @@ void home() {
     cout << "Tus recomendaciones actuales:\n";
     vector<int> recos = g_recomendador->recomendar(*hist, 5);
     if (recos.empty()) {
-        cout << "  (Aun no tienes recomendaciones. Dale like a peliculas para personalizar tu Home.)\n";}
+        cout << "  (Catalogo vacio)\n";}
     else {
+        bool tieneHistorial = !hist->getGenerosFavoritos().empty() || !hist->getWatchLater().empty();
+        if (!tieneHistorial) {
+            cout << "  (Mostrando peliculas mas recientes, interactua para personalizar)\n";}
         for (int id : recos) {
             const Movie* peli = g_catalogo.getById(id);
             if (peli != nullptr) cout << "  - " << peli->title << "\n";}}

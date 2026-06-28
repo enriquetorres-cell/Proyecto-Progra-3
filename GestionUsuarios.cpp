@@ -43,16 +43,12 @@ bool GestionUsuarios::eliminar(int id) {
         if ((*it)->getId() == id) {
             // Si era el activo en Sesion, hacer logout primero
             if (Sesion::getInstance().getActivo() == *it) {
-                Sesion::getInstance().logout();
-            }
+                Sesion::getInstance().logout();}
             delete *it;
             usuarios.erase(it);
             guardarEnArchivo();
-            return true;
-        }
-    }
-    return false;
-}
+            return true;}}
+    return false;}
 
 Usuario* GestionUsuarios::seleccionar(int id) {
     for (Usuario* u : usuarios) {
@@ -195,12 +191,14 @@ bool GestionUsuarios::guardarEnArchivo(const std::string& ruta) const {
         f << "WATCHLATER " << wl.size() << "\n";
         for (int mid : wl) f << mid << "\n";
 
+        const std::vector<int>& vistas = h->getVistasRecientes();
+        f << "VISTAS " << vistas.size() << "\n";
+        for (int mid : vistas) f << mid << "\n";
+
         const std::map<std::string, int>& gens = h->getGenerosFavoritos();
         f << "GENEROS " << gens.size() << "\n";
         for (const auto& par : gens) {
-            f << par.second << " " << par.first << "\n";
-        }
-    }
+            f << par.second << " " << par.first << "\n";}}
 
     return f.good();
 }
@@ -279,6 +277,14 @@ bool GestionUsuarios::cargarDesdeArchivo(const std::string& ruta) {
             if (!leerInt(f, mid)) { sub_ok = false; break; }
             h->agregarVerMasTarde(mid);
         }
+        if (!sub_ok) { delete u; ok = false; break; }
+
+        // VISTAS
+        if (!leerLabelInt(f, "VISTAS", n)) { delete u; ok = false; break; }
+        for (int j = 0; j < n; j++) {
+            int mid;
+            if (!leerInt(f, mid)) { sub_ok = false; break; }
+            h->registrarVista(mid);}
         if (!sub_ok) { delete u; ok = false; break; }
 
         // GENEROS

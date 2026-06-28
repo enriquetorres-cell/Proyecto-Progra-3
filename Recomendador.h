@@ -14,8 +14,9 @@ using namespace std;
 
 class Recomendador {
     const Catalogo& catalogo;
-    int pesoLike = 2;
-    int pesoWatchLater = 1;
+    int pesoLike = 3;
+    int pesoWatchLater = 2;
+    int pesoVista = 1;
 public:
     explicit Recomendador(const Catalogo& cat);
     vector<int> recomendar(const UsuarioHistorial& historial, int topN = 10) const;
@@ -23,6 +24,7 @@ public:
     map<string, int> calcularPesosPorGenero(const UsuarioHistorial& h) const;
     bool yaVista(int movieId, const UsuarioHistorial& h) const;
     int puntajePelicula(const Movie* peli, const map<string, int>& pesos) const;
+    vector<int> peliculasMasRecientes(int topN = 10) const;
 };
 
 
