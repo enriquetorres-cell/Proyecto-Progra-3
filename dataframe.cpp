@@ -5,7 +5,9 @@
 #include <string>
 #include <algorithm>
 #include <set>
+#include <tuple>
 #include <iostream>
+#include <thread>
 
 
 // elimina espacios sobrantes, saltos de linea o tabulaciones a los extremos
@@ -128,6 +130,29 @@ void limpiarMovie(Movie* m) {
         remove_if(m->cast.begin(), m->cast.end(), [](const string& a){ return a.empty(); }),
         m->cast.end());}
 
+static void procesarBloqueCSV(const vector<string>& lineas, size_t inicio, size_t fin,
+                              vector<Movie*>& salida) {
+    for (size_t i = inicio; i < fin; i++) {
+        const string& linea = lineas[i];
+        if (linea.empty()) continue;
+
+        vector<string> columnas = mapeoLinea(linea);
+        if (columnas.size() < 8) continue;
+
+        Movie* m = new Movie();
+        try { m->releaseYear = stoi(limpiarSobrantes(columnas[0])); }
+        catch(...) { m->releaseYear = 0; }
+
+        m->title    = limpiarTexto(columnas[1]);
+        m->origin   = limpiarTexto(columnas[2]);
+        m->director = limpiarTexto(columnas[3]);
+        m->cast     = convertirVector(limpiarTexto(columnas[4]), ',');
+        m->genres   = convertirVector(limpiarTexto(columnas[5]), ',');
+        m->plot     = limpiarTexto(columnas[7]);
+        limpiarMovie(m);
+
+        if (m->releaseYear == 0) { delete m; continue; }
+        salida.push_back(m);}}
 
 // guardar el df
 void guardarDF(const string& nombreArchivo, dataframe& df) {
@@ -138,39 +163,42 @@ void guardarDF(const string& nombreArchivo, dataframe& df) {
     string linea;
     getline(file, linea); // saltar cabecera
 
-    //para duplicados
+    vector<string> lineas;
+    while (getline(file, linea)) lineas.push_back(linea);
+    file.close();
+
+    size_t total = lineas.size();
+    if (total == 0) {
+        cout << "Dataframe guardado con informacion de: 0 peliculas" << endl;
+        return;}
+
+    unsigned int nHilos = thread::hardware_concurrency();
+    if (nHilos == 0) nHilos = 4;
+    if ((size_t)nHilos > total) nHilos = (unsigned int)total;
+
+    vector<vector<Movie*>> parcial(nHilos);
+    vector<thread> hilos;
+    hilos.reserve(nHilos);
+
+    size_t bloque = (total + nHilos - 1) / nHilos;
+    for (unsigned int t = 0; t < nHilos; t++) {
+        size_t inicio = t * bloque;
+        size_t fin    = min(total, inicio + bloque);
+        if (inicio >= fin) continue;
+        hilos.push_back(thread(procesarBloqueCSV, cref(lineas), inicio, fin, ref(parcial[t])));}
+    for (thread& h : hilos) h.join();
+
     set<tuple<string,int,string>> vistos;
     int contadorID = 0;
 
-    while (getline(file, linea)) {
-        if (linea.empty()) continue;
-        vector<string> columnas = mapeoLinea(linea);
-        if (columnas.size() < 8) continue;
-        Movie* m = new Movie();
-        m->id = contadorID;
-        try { m->releaseYear = stoi(limpiarSobrantes(columnas[0])); }
-        catch(...) { m->releaseYear = 0; }
+    for (unsigned int t = 0; t < nHilos; t++) {
+        for (Movie* m : parcial[t]) {
+            auto key = make_tuple(to_lower(m->title), m->releaseYear, to_lower(m->origin));
+            if (vistos.count(key)) { delete m; continue; }
+            vistos.insert(key);
+            m->id = contadorID++;
+            df.push_back(m);}}
 
-        m->title    = limpiarTexto(columnas[1]);
-        m->origin   = limpiarTexto(columnas[2]);
-        m->director = limpiarTexto(columnas[3]);
-        m->cast     = convertirVector(limpiarTexto(columnas[4]), ',');
-        m->genres   = convertirVector(limpiarTexto(columnas[5]), ',');
-        // columnas[6] = wikiPage → ignorar
-        m->plot     = limpiarTexto(columnas[7]);
-        limpiarMovie(m);
-
-        if (m->releaseYear == 0) {delete m; continue;}
-        // Eliminar duplicados por (titulo, año, origen)
-        auto key = make_tuple(to_lower(m->title), m->releaseYear, to_lower(m->origin));
-        if (vistos.count(key)) {
-            delete m;
-            continue;}
-        vistos.insert(key);
-        contadorID++;
-        df.push_back(m);}
-
-    file.close();
     cout << "Dataframe guardado con informacion de: " << df.size() << " peliculas" << endl;}
 
 void liberarDF(dataframe& df) {
