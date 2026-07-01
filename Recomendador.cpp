@@ -5,6 +5,7 @@
 #include "Recomendador.h"
 #include <algorithm>
 #include <utility>
+#include "RankingUtils.h"
 
 Recomendador::Recomendador(const Catalogo& cat) : catalogo(cat) {}
 
@@ -52,16 +53,11 @@ vector<int> Recomendador::recomendar(const UsuarioHistorial& historial, int topN
         int score = puntajePelicula(peli, pesos);
         if (score > 0) {
             candidatos.push_back({peli->id, score});}}
-    stable_sort(candidatos.begin(), candidatos.end(),
-                [](const pair<int,int>& a, const pair<int,int>& b) {
-                    if (a.second != b.second) return a.second > b.second;
-                    return a.first < b.first;});
-    vector<int> resultado;
-    int limite = (int)candidatos.size() < topN ? (int)candidatos.size() : topN;
-    resultado.reserve(limite);
-    for (int i = 0; i < limite; i++) {
-        resultado.push_back(candidatos[i].first);}
-    return resultado;}
+    return ordenarPorPuntaje(std::move(candidatos),
+        [](const pair<int,int>& a, const pair<int,int>& b) {
+            if (a.second != b.second) return a.second > b.second;
+            return a.first < b.first;}, topN);
+}
 
 vector<int> Recomendador::peliculasMasRecientes(int topN) const {
     vector<pair<int, int>> porAnio;   // id, anio
@@ -72,12 +68,7 @@ vector<int> Recomendador::peliculasMasRecientes(int topN) const {
         if (peli->genres.empty()) continue;
         porAnio.push_back({peli->id, peli->releaseYear});}
 
-    stable_sort(porAnio.begin(), porAnio.end(),
-                [](const pair<int,int>& a, const pair<int,int>& b) {
-                    return a.second > b.second;});
-
-    vector<int> resultado;
-    int limite = (int)porAnio.size() < topN ? (int)porAnio.size() : topN;
-    resultado.reserve(limite);
-    for (int i = 0; i < limite; i++) resultado.push_back(porAnio[i].first);
-    return resultado;}
+    return ordenarPorPuntaje(std::move(porAnio),
+        [](const pair<int,int>& a, const pair<int,int>& b) {
+            return a.second > b.second;
+        }, topN);}

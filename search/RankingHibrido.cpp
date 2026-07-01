@@ -1,4 +1,5 @@
 #include "RankingHibrido.h"
+#include "RankingUtils.h"
 #include <algorithm>
 
 RankingHibrido::RankingHibrido(const Catalogo& cat) : RankingStrategy(cat) {}
@@ -49,12 +50,7 @@ vector<int> RankingHibrido::rankear(const set<int>& ids,
         conPuntaje.push_back({id, pts});
     }
 
-    stable_sort(conPuntaje.begin(), conPuntaje.end(),
-                [](const pair<int, double>& a, const pair<int, double>& b) {
-                    return a.second > b.second;
-                });
-
-    vector<int> ordenados;
-    ordenados.reserve(conPuntaje.size());
-    for (const auto& par : conPuntaje) ordenados.push_back(par.first);
-    return ordenados;}
+    return ordenarPorPuntaje(move(conPuntaje),
+        [](const pair<int, double>& a, const pair<int, double>& b) {
+            return a.second > b.second;
+        });}

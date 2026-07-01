@@ -1,4 +1,5 @@
 #include "RelevanciaTextual.h"
+#include "RankingUtils.h"
 #include <algorithm>
 
 RelevanciaTextual::RelevanciaTextual(const Catalogo& cat) : RankingStrategy(cat) {}
@@ -46,16 +47,11 @@ vector<int> RelevanciaTextual::rankear(const set<int>& ids, const vector<string>
 
         if (pts > 0) conPuntaje.push_back({id, pts});}
 
-    stable_sort(conPuntaje.begin(), conPuntaje.end(),
-                [this](const pair<int, double>& a, const pair<int, double>& b) {
-                    if (a.second != b.second) return a.second > b.second;
-                    const Movie* ma = catalogo.getById(a.first);
-                    const Movie* mb = catalogo.getById(b.first);
-                    int yearA = (ma ? ma->releaseYear : 0);
-                    int yearB = (mb ? mb->releaseYear : 0);
-                    return yearA > yearB;});
-
-    vector<int> ordenados;
-    ordenados.reserve(conPuntaje.size());
-    for (const auto& par : conPuntaje) ordenados.push_back(par.first);
-    return ordenados;}
+    return ordenarPorPuntaje(move(conPuntaje),
+        [this](const pair<int, double>& a, const pair<int, double>& b) {
+            if (a.second != b.second) return a.second > b.second;
+            const Movie* ma = catalogo.getById(a.first);
+            const Movie* mb = catalogo.getById(b.first);
+            int yearA = (ma ? ma->releaseYear : 0);
+            int yearB = (mb ? mb->releaseYear : 0);
+            return yearA > yearB;});}
