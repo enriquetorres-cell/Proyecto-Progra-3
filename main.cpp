@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <limits>
+#include <chrono>
 
 #include "Catalogo.h"
 #include "Movie.h"
@@ -19,7 +20,7 @@
 #include "search/RankingHibrido.h"
 
 using namespace std;
-
+using namespace chrono;
 
 static Catalogo            g_catalogo;
 static Trie                g_trie;
@@ -376,7 +377,11 @@ void profilePage() {
 
 
 void runApp() {
+    auto inicio= high_resolution_clock::now();
     loadingScreen();
+    auto fin= high_resolution_clock::now();
+    auto duracion = duration_cast<milliseconds>(fin - inicio).count();
+    cout << "||||| Tiempo de ejecucion: " << (long double)duracion/1000.0 << " s |||||\n";
     profilePage();}
 
 int main() {

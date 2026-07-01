@@ -1,7 +1,5 @@
 #include "Indexador.h"
 #include "../tokenizador.h"
-#include <algorithm>
-#include <thread>
 #include <functional>
 #include <utility>
 
@@ -68,39 +66,37 @@ void Indexador::indexar(const Catalogo& catalogo,
                         const vector<string>& stopwords,
                         bool incluirPlot) {
     const auto& peliculas = catalogo.getMovies();
-    size_t total = peliculas.size();
-    if (total == 0) return;
 
-    unsigned int nHilos = thread::hardware_concurrency();
-    if (nHilos == 0) nHilos = 4;
-    if ((size_t)nHilos > total) nHilos = (unsigned int)total;
+    for (Movie* m : peliculas) {
+        if (m == nullptr) continue;
 
-
-    vector<vector<Entrada>> trieParcial(nHilos);
-    vector<vector<Entrada>> ngramParcial(nHilos);
-    vector<thread> hilos;
-    hilos.reserve(nHilos);
-
-    size_t bloque = (total + nHilos - 1) / nHilos;
-
-    for (unsigned int t = 0; t < nHilos; t++) {
-        size_t inicio = t * bloque;
-        size_t fin    = min(total, inicio + bloque);
-        if (inicio >= fin) continue;
-
-        hilos.push_back(thread(procesarBloque,
-                                cref(peliculas), inicio, fin,
-                                cref(stopwords), incluirPlot,
-                                ref(trieParcial[t]), ref(ngramParcial[t])));}
-
-    for (thread& h : hilos) h.join();
-
-    for (size_t t = 0; t < nHilos; t++) {
-        for (size_t i = 0; i < trieParcial[t].size(); i++) {
-            trie.insertar(trieParcial[t][i].first, trieParcial[t][i].second);
+        string texto = m->title;
+        if (incluirPlot) {
+            texto.push_back(' ');
+            texto += m->plot;
         }
-        for (size_t i = 0; i < ngramParcial[t].size(); i++) {
-            ngram.insertarPalabra(ngramParcial[t][i].first, ngramParcial[t][i].second);
+        vector<string> tokens = tokenizar(texto, stopwords);
+
+        for (const string& token : tokens) {
+            trie.insertar(token, m->id);
+            ngram.insertarPalabra(token, m->id);
+        }
+
+
+        if (!m->director.empty()) {
+            string dir = normalizarTag(m->director);
+            if (!dir.empty()) {
+                trie.insertar("director:" + dir, m->id);
+            }
+        }
+
+
+        for (const string& g : m->genres) {
+            if (g.empty()) continue;
+            string gen = normalizarTag(g);
+            if (!gen.empty()) {
+                trie.insertar("tag:" + gen, m->id);
+            }
         }
     }
 }
