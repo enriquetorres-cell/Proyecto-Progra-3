@@ -32,9 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,23 +61,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000294780394199" />
-      <entry key="MS500" value="1.132038462332185" />
-      <entry key="S2" value="2.4323529638742203" />
-      <entry key="S5" value="4.215026935385929" />
-      <entry key="S10" value="5.356534794894965" />
-      <entry key="S30" value="6.38338270099311" />
-      <entry key="S60" value="6.682115291069942" />
-      <entry key="M2" value="6.838583242103042" />
-      <entry key="M5" value="6.935504174136515" />
-      <entry key="M10" value="7.151729527536769" />
-      <entry key="M15" value="8.178036662543786" />
-      <entry key="M30" value="14.806344451622792" />
-      <entry key="H1" value="26.958180575770914" />
-      <entry key="H2" value="38.90433831669879" />
-      <entry key="H4" value="47.3375339245259" />
-      <entry key="D1" value="56.04482416178117" />
-      <entry key="W1" value="57.71598741778906" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000132312350158" />
+      <entry key="S2" value="1.2561935968805134" />
+      <entry key="S5" value="4.911653229704179" />
+      <entry key="S10" value="14.944207588562875" />
+      <entry key="S30" value="49.602908391022346" />
+      <entry key="S60" value="75.00417236462971" />
+      <entry key="M2" value="95.1968785725591" />
+      <entry key="M5" value="111.83159493863043" />
+      <entry key="M10" value="118.671515254587" />
+      <entry key="M15" value="121.92644891031138" />
+      <entry key="M30" value="130.54503405673398" />
+      <entry key="H1" value="143.76011498930364" />
+      <entry key="H2" value="156.52491947260594" />
+      <entry key="H4" value="165.54835204933954" />
+      <entry key="D1" value="174.89611184201786" />
+      <entry key="W1" value="176.69427072375115" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -100,23 +99,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.0248212294611586E-4" />
-      <entry key="MS500" value="0.21276231942825732" />
-      <entry key="S2" value="1.765977710057654" />
-      <entry key="S5" value="3.790099012365398" />
-      <entry key="S10" value="5.097940885528576" />
-      <entry key="S30" value="6.283833270961842" />
-      <entry key="S60" value="6.630429206893501" />
-      <entry key="M2" value="6.8122419726455155" />
-      <entry key="M5" value="6.924845353490358" />
-      <entry key="M10" value="7.146375647945943" />
-      <entry key="M15" value="8.174448413157943" />
-      <entry key="M30" value="14.8045006059491" />
-      <entry key="H1" value="26.95721426956401" />
-      <entry key="H2" value="38.90383340631825" />
-      <entry key="H4" value="47.33727379028253" />
-      <entry key="D1" value="56.044779484297734" />
-      <entry key="W1" value="57.715980999043666" />
+      <entry key="MS100" value="0.27739236801696127" />
+      <entry key="MS500" value="0.7737890644179948" />
+      <entry key="S2" value="1.1746794125945283" />
+      <entry key="S5" value="4.8296346720638645" />
+      <entry key="S10" value="14.871177163636299" />
+      <entry key="S30" value="49.5573762785397" />
+      <entry key="S60" value="74.97210093615382" />
+      <entry key="M2" value="95.17357235601484" />
+      <entry key="M5" value="111.81809693483339" />
+      <entry key="M10" value="118.66364215530938" />
+      <entry key="M15" value="121.9208931428503" />
+      <entry key="M30" value="130.54205152411868" />
+      <entry key="H1" value="143.75853781658753" />
+      <entry key="H2" value="156.52409789471272" />
+      <entry key="H4" value="165.54793056589472" />
+      <entry key="D1" value="174.8960398280083" />
+      <entry key="W1" value="176.69426038846944" />
     </decayedShown>
   </component>
   <component name="ProjectApplicationVersion">
@@ -141,18 +140,21 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "C/C++ File.main.cpp.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "d2",
-    "last_opened_file_path": "C:/Users/tenri/Documents/proyPr3/Proyecto-Progra-3",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/Proyecto-Progra-3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,11 +175,6 @@
   </component>
   <component name="RunManager" selected="C/C++ File.Prueba_lectura.cpp">
     <configuration name="Proyecto_Progra_3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="Proyecto_Progra_3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="Proyecto_Progra_3">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -250,6 +247,8 @@
       <workItem from="1782085847235" duration="6000" />
       <workItem from="1782085869123" duration="1941000" />
       <workItem from="1782093142288" duration="6361000" />
+      <workItem from="1782339067497" duration="80000" />
+      <workItem from="1782935499471" duration="324000" />
     </task>
     <servers />
   </component>
