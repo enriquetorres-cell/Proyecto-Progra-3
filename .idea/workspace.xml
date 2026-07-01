@@ -28,13 +28,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/search/RankingUtils.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recomendador.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Recomendador.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/AfinidadConLikes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/search/AfinidadConLikes.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/RankingHibrido.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/search/RankingHibrido.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/RelevanciaTextual.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/search/RelevanciaTextual.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
