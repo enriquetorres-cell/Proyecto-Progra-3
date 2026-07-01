@@ -131,6 +131,7 @@ El tiempo no se aisló por etapa (`guardarDF` vs. `Indexador::indexar` por separ
 | Strategy | `search/RankingStrategy.h` + `RankingHibrido`, `RelevanciaTextual`, `AfinidadConLikes` | El algoritmo de ranking es intercambiable sin que `Buscador` cambie |
 | Singleton | `Sesion.h`, `GestionUsuarios.h` | Una única instancia de la sesión activa y del gestor de los 4 perfiles en toda la app |
 | Composite | `search/Query.h` (`OrQuery` sobre `TermQuery`/`TagQuery`/`DirectorQuery`) | Una consulta compuesta se trata igual que una consulta simple |
+| Decorator | `search/RankingConEtiquetas.h`, envuelve a `g_strategyBase` en `main.cpp` | Calcula, para cada película del resultado, si el usuario ya la vio, le dio like o la guardó en "ver más tarde"; `main.cpp` imprime esas etiquetas al listar resultados y al abrir el detalle, sin modificar `RankingHibrido`, `RelevanciaTextual` ni `AfinidadConLikes` |
 
 ## Persistencia
 
