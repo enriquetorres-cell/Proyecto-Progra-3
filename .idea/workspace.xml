@@ -7,31 +7,14 @@
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
   </component>
-  <component name="CMakePresetLoader">{
-  &quot;useNewFormat&quot;: true
-}</component>
-  <component name="CMakeProjectFlavorService">
-    <option name="flavorId" value="CMakePlainProjectFlavor" />
-  </component>
-  <component name="CMakeReloadState">
-    <option name="reloaded" value="true" />
-  </component>
-  <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="Proyecto_Progra_3" targetName="Proyecto_Progra_3" />
-    </generated>
-  </component>
-  <component name="CMakeSettings">
-    <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
-    </configurations>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/search/RankingConEtiquetas.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    <list default="true" id="8ee969ae-0cc4-44c6-a754-17874f0e643d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-Progra-3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,20 +24,11 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="San4" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/search/RankingConEtiquetas.h" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="5YZq8Ase" />
+    <option name="directoryName" value="D0dKw3bb" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -62,23 +36,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000294780394199" />
-      <entry key="MS500" value="1.132038462332185" />
-      <entry key="S2" value="2.4323529638742203" />
-      <entry key="S5" value="4.215026935385929" />
-      <entry key="S10" value="5.356534794894965" />
-      <entry key="S30" value="6.38338270099311" />
-      <entry key="S60" value="6.682115291069942" />
-      <entry key="M2" value="6.838583242103042" />
-      <entry key="M5" value="6.935504174136515" />
-      <entry key="M10" value="7.151729527536769" />
-      <entry key="M15" value="8.178036662543786" />
-      <entry key="M30" value="14.806344451622792" />
-      <entry key="H1" value="26.958180575770914" />
-      <entry key="H2" value="38.90433831669879" />
-      <entry key="H4" value="47.3375339245259" />
-      <entry key="D1" value="56.04482416178117" />
-      <entry key="W1" value="57.71598741778906" />
+      <entry key="MS100" value="1.86849614614574" />
+      <entry key="MS500" value="4.452568564123311" />
+      <entry key="S2" value="7.34910668042348" />
+      <entry key="S5" value="9.559930896118992" />
+      <entry key="S10" value="11.206504964247923" />
+      <entry key="S30" value="12.892938651599392" />
+      <entry key="S60" value="13.420492782276183" />
+      <entry key="M2" value="13.7034075617187" />
+      <entry key="M5" value="13.879675435473246" />
+      <entry key="M10" value="13.939552503770772" />
+      <entry key="M15" value="13.959637992380738" />
+      <entry key="M30" value="13.97978708348136" />
+      <entry key="H1" value="13.989885549599457" />
+      <entry key="H2" value="13.99494077501621" />
+      <entry key="H4" value="13.99746988734352" />
+      <entry key="D1" value="13.99957824507138" />
+      <entry key="W1" value="13.99993974759398" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -100,158 +74,70 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.0248212294611586E-4" />
-      <entry key="MS500" value="0.21276231942825732" />
-      <entry key="S2" value="1.765977710057654" />
-      <entry key="S5" value="3.790099012365398" />
-      <entry key="S10" value="5.097940885528576" />
-      <entry key="S30" value="6.283833270961842" />
-      <entry key="S60" value="6.630429206893501" />
-      <entry key="M2" value="6.8122419726455155" />
-      <entry key="M5" value="6.924845353490358" />
-      <entry key="M10" value="7.146375647945943" />
-      <entry key="M15" value="8.174448413157943" />
-      <entry key="M30" value="14.8045006059491" />
-      <entry key="H1" value="26.95721426956401" />
-      <entry key="H2" value="38.90383340631825" />
-      <entry key="H4" value="47.33727379028253" />
-      <entry key="D1" value="56.044779484297734" />
-      <entry key="W1" value="57.715980999043666" />
+      <entry key="MS100" value="1.7576083516879653" />
+      <entry key="MS500" value="4.3695957786643485" />
+      <entry key="S2" value="7.309193883375358" />
+      <entry key="S5" value="9.532557287556735" />
+      <entry key="S10" value="11.187424294092631" />
+      <entry key="S30" value="12.88458952534653" />
+      <entry key="S60" value="13.415997347294594" />
+      <entry key="M2" value="13.701073051315714" />
+      <entry key="M5" value="13.878719902967136" />
+      <entry key="M10" value="13.93907103881301" />
+      <entry key="M15" value="13.959316187990296" />
+      <entry key="M30" value="13.97962576594695" />
+      <entry key="H1" value="13.989804786722269" />
+      <entry key="H2" value="13.994900367515651" />
+      <entry key="H4" value="13.997449677073439" />
+      <entry key="D1" value="13.999574875787141" />
+      <entry key="W1" value="13.999939266245468" />
     </decayedShown>
   </component>
-  <component name="ProjectApplicationVersion">
-    <option name="ide" value="CLion" />
-    <option name="majorVersion" value="2025" />
-    <option name="minorVersion" value="2" />
-    <option name="productBranch" value="Classic" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="3CJGcJ6JLPtAKOQuOQJgZY72BFv" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="3FusUmIaQCUQhVZT2bUQHzfyLHR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "C/C++ File.main.cpp.executor": "Run",
-    "CMake Application.Proyecto_Progra_3.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "M5",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/marce/Proyecto-Progra-3",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
+    "org.rust.first.attach.projects": "true",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
-    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\marce\Proyecto-Progra-3\cmake-build-debug" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Usuario\Desktop\Pogramación III\Proyecto-Progra-3" />
-    </key>
-  </component>
-  <component name="RunManager" selected="CMake Application.Proyecto_Progra_3">
-    <configuration name="Proyecto_Progra_3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="Proyecto_Progra_3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_Progra_3" RUN_TARGET_NAME="Proyecto_Progra_3">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Prueba_lectura.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="Prueba_lectura.cpp" CONFIG_NAME="Prueba_lectura.cpp">
-      <option name="sourceFile" value="Prueba_lectura.cpp" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_Progra_3" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
-      <option name="sourceFile" value="main.cpp" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
-      <item itemvalue="C/C++ File.main.cpp" />
-      <item itemvalue="CMake Application.Proyecto_Progra_3" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="C/C++ File.main.cpp" />
-        <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
-        <item itemvalue="C/C++ File.Prueba_lectura.cpp" />
-        <item itemvalue="C/C++ File.main.cpp" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="878e560e-5cf4-4991-a54a-b462488bce7c" name="Changes" comment="" />
-      <created>1776096336370</created>
+      <changelist id="8ee969ae-0cc4-44c6-a754-17874f0e643d" name="Changes" comment="" />
+      <created>1782936309273</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1776096336370</updated>
-      <workItem from="1776096337649" duration="1296000" />
-      <workItem from="1776099364706" duration="1729000" />
-      <workItem from="1776699144761" duration="4905000" />
-      <workItem from="1777303273972" duration="2626000" />
-      <workItem from="1777501116992" duration="587000" />
-      <workItem from="1778296790955" duration="3320000" />
-      <workItem from="1778300175621" duration="10000" />
-      <workItem from="1778300201256" duration="1187000" />
-      <workItem from="1782085847235" duration="6000" />
-      <workItem from="1782085869123" duration="1941000" />
-      <workItem from="1782093142288" duration="6361000" />
-      <workItem from="1782196725580" duration="13674000" />
-      <workItem from="1782339670595" duration="6405000" />
-      <workItem from="1782656412536" duration="4662000" />
-      <workItem from="1782849826729" duration="197000" />
-      <workItem from="1782868255490" duration="2695000" />
-      <workItem from="1782892012633" duration="3696000" />
+      <updated>1782936309273</updated>
+      <workItem from="1782936312865" duration="45000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.exe" />
-  </component>
-  <component name="VCPKGProject">
-    <isAutomaticCheckingOnLaunch value="false" />
-    <isAutomaticFoundErrors value="true" />
-    <isAutomaticReloadCMake value="true" />
   </component>
 </project>
