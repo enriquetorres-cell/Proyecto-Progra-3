@@ -19,9 +19,7 @@ void NgramIndex::insertarPalabra(const string& palabra, int movieId) {
 set<int> NgramIndex::buscar(const string& consulta) const {
     set<int> resultado;
     if ((int)consulta.size() < n) {
-        // Consulta mas corta que un ngrama (ej. n=3, "it","up").
-        // No se puede formar ningun ngrama -> vacio.
-        // El Buscador (Paquete 4) decide si hace fallback.
+
         return resultado;
     }
  
@@ -30,7 +28,6 @@ set<int> NgramIndex::buscar(const string& consulta) const {
         string ng = consulta.substr(i, n);
         auto it = indice.find(ng);
         if (it == indice.end()) {
-            // Algun ngrama no existe -> la interseccion es vacia, corto.
             return set<int>();
         }
         if (primero) {

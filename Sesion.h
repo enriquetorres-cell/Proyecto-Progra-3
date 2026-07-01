@@ -16,9 +16,7 @@ public:
         return instance;
     }
  
-    // FIX Error 5: valida nullptr y que no haya ya un activo.
-    // Para cambiar de perfil hay que hacer logout() primero (lo pide el spec).
-    // Devuelve true si pudo iniciar sesion, false en caso contrario.
+
     bool login(Usuario* usuario) {
         if (usuario == nullptr) return false;
         if (usuarioActivo != nullptr) return false;

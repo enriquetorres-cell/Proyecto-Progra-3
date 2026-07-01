@@ -6,15 +6,13 @@
  
 class Catalogo {
     std::vector<Movie*> movies;
-    // FIX Error 4: indice por id para getById en O(1).
-    // Se mantiene en paralelo a 'movies' en agregar() y limpiar().
+
     std::unordered_map<int, Movie*> porId;
  
 public:
     Catalogo() = default;
  
-    // FIX Error 8: el Catalogo es dueño de las Movie*.
-    // Prohibir la copia evita doble delete al destruir copias.
+
     Catalogo(const Catalogo&) = delete;
     Catalogo& operator=(const Catalogo&) = delete;
  
@@ -25,7 +23,6 @@ public:
         }
     }
  
-    // FIX Error 4: O(1) usando el indice.
     Movie* getById(int movieId) {
         auto it = porId.find(movieId);
         return it == porId.end() ? nullptr : it->second;
@@ -48,14 +45,12 @@ public:
         return movies.empty();
     }
  
-    // FIX Error 3: libera las Movie* antes de vaciar.
     void limpiar() {
         for (Movie* m : movies) delete m;
         movies.clear();
         porId.clear();
     }
  
-    // FIX Error 3: el destructor libera todas las Movie*.
     ~Catalogo() {
         for (Movie* m : movies) delete m;
     }

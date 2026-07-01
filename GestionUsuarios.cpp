@@ -16,7 +16,7 @@ GestionUsuarios& GestionUsuarios::getInstance() {
 }
 
 GestionUsuarios::~GestionUsuarios() {
-    // Por seguridad: si Sesion todavia tiene un activo apuntando a uno
+    // si Sesion todavia tiene un activo apuntando a uno
     // de nuestros usuarios, hacemos logout antes de borrarlos.
     Sesion::getInstance().logout();
     for (Usuario* u : usuarios) {
@@ -41,7 +41,7 @@ Usuario* GestionUsuarios::crear(const std::string& nombre) {
 bool GestionUsuarios::eliminar(int id) {
     for (auto it = usuarios.begin(); it != usuarios.end(); ++it) {
         if ((*it)->getId() == id) {
-            // Si era el activo en Sesion, hacer logout primero
+            // Si era el activo en Sesion hacer logout primero
             if (Sesion::getInstance().getActivo() == *it) {
                 Sesion::getInstance().logout();}
             delete *it;
@@ -71,49 +71,15 @@ bool GestionUsuarios::estaVacio() const  { return usuarios.empty(); }
 size_t GestionUsuarios::cantidad() const { return usuarios.size(); }
 
 void GestionUsuarios::limpiarTodo() {
-    Sesion::getInstance().logout(); // no dejar dangling pointer en Sesion
+    Sesion::getInstance().logout();
     for (Usuario* u : usuarios) delete u;
     usuarios.clear();
     proximoId = 0;
 }
 
-// Persistencia
-//
-// Formato (texto plano, una "key" por linea):
-//
-//   # Perfiles UTEC Progra3 v1
-//   USUARIOS <N>
-//   PROXIMO_ID <M>
-//   ---
-//   ID <id>
-//   NOMBRE <nombre con espacios>
-//   LIKES <k>
-//   <movieId_1>
-//   <movieId_2>
-//   ...
-//   WATCHLATER <k>
-//   <movieId_1>
-//   ...
-//   GENEROS <k>
-//   <count> <genero con espacios>
-//   ...
-//   ---
-//   (repite por usuario)
-//
-// Por que asi y no JSON/CSV:
-//   - No requiere libreria externa.
-//   - Cada lista anuncia su tamanio (LIKES <k>) -> el parser hace un for
-//     fijo en vez de adivinar delimitadores. Robusto y predecible.
-//   - Los generos pueden tener espacios ("romantic comedy"). Poner el
-//     count primero y dejar el resto de la linea como nombre es trivial
-//     con istringstream + getline.
-
-// ---- helpers internos (no expuestos) ----
-
 namespace {
 
-// Lee una linea con formato "LABEL <int>" y deja el int en 'valor'.
-// Devuelve true si la linea existe y el label coincide.
+
 bool leerLabelInt(std::ifstream& f, const std::string& esperado, int& valor) {
     std::string linea;
     if (!std::getline(f, linea)) return false;
@@ -123,15 +89,12 @@ bool leerLabelInt(std::ifstream& f, const std::string& esperado, int& valor) {
     return label == esperado;
 }
 
-// Lee una linea con formato "LABEL <int>" y lo guarda en size_t. Igual que arriba
-// pero para tamanios. Usamos int internamente porque el archivo siempre va a
-// caber en int (max 4 usuarios, listas chicas).
+
 bool leerLabelInt_st(std::ifstream& f, const std::string& esperado, int& valor) {
     return leerLabelInt(f, esperado, valor);
 }
 
-// Lee una linea con formato "NOMBRE <texto que puede tener espacios>".
-// Devuelve el texto en 'valor' (sin el prefijo "NOMBRE ").
+
 bool leerLabelString(std::ifstream& f, const std::string& esperado, std::string& valor) {
     std::string linea;
     if (!std::getline(f, linea)) return false;
@@ -144,7 +107,6 @@ bool leerLabelString(std::ifstream& f, const std::string& esperado, std::string&
     return true;
 }
 
-// Lee una linea con un solo entero.
 bool leerInt(std::ifstream& f, int& valor) {
     std::string linea;
     if (!std::getline(f, linea)) return false;
@@ -152,7 +114,6 @@ bool leerInt(std::ifstream& f, int& valor) {
     return static_cast<bool>(iss >> valor);
 }
 
-// Lee una linea con formato "<count> <texto con espacios>".
 bool leerCountString(std::ifstream& f, int& count, std::string& texto) {
     std::string linea;
     if (!std::getline(f, linea)) return false;
@@ -166,7 +127,7 @@ bool leerCountString(std::ifstream& f, int& count, std::string& texto) {
 
 } // namespace anonimo
 
-// ---- guardar ----
+// guardar
 
 bool GestionUsuarios::guardarEnArchivo(const std::string& ruta) const {
     std::ofstream f(ruta);
@@ -293,9 +254,7 @@ bool GestionUsuarios::cargarDesdeArchivo(const std::string& ruta) {
             int count = 0;
             std::string genero;
             if (!leerCountString(f, count, genero)) { sub_ok = false; break; }
-            // registrarGenero suma 1 por llamada. Para reconstruir el conteo
-            // original llamamos 'count' veces. Los counts son chicos (cuantos
-            // generos puede consumir un usuario? pocas decenas).
+
             for (int k = 0; k < count; k++) h->registrarGenero(genero);
         }
         if (!sub_ok) { delete u; ok = false; break; }
@@ -305,7 +264,6 @@ bool GestionUsuarios::cargarDesdeArchivo(const std::string& ruta) {
 
     if (!ok) return liberarYFallar();
 
-    // Exito: reemplazar estado actual
     Sesion::getInstance().logout(); // invalidar sesion previa
     for (Usuario* u : usuarios) delete u;
     usuarios = std::move(nuevos);
