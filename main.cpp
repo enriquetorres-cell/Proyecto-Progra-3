@@ -18,6 +18,7 @@
 #include "index/Indexador.h"
 #include "search/Buscador.h"
 #include "search/RankingHibrido.h"
+#include "search/RankingConEtiquetas.h"
 
 using namespace std;
 using namespace chrono;
@@ -28,7 +29,8 @@ static Trie                g_trie;
 static NgramIndex          g_ngram;
 static GestionUsuarios&    g_gestion = GestionUsuarios::getInstance();
 static Sesion&             g_sesion  = Sesion::getInstance();
-static RankingHibrido*     g_strategy     = nullptr;
+static RankingHibrido*        g_strategyBase = nullptr;
+static RankingConEtiquetas*   g_strategy     = nullptr;
 static Buscador*           g_buscador     = nullptr;
 static Recomendador*       g_recomendador = nullptr;
 static vector<string>      g_stopwords;
@@ -70,7 +72,8 @@ void loadingScreen() {
     Indexador::indexar(g_catalogo, g_trie, g_ngram, g_stopwords, true);
     cout << "  - Indices construidos\n";
 
-    g_strategy     = new RankingHibrido(g_catalogo);
+    g_strategyBase = new RankingHibrido(g_catalogo);
+    g_strategy     = new RankingConEtiquetas(g_catalogo, *g_strategyBase);
     g_buscador     = new Buscador(g_catalogo, g_trie, g_ngram, *g_strategy);
     g_recomendador = new Recomendador(g_catalogo);
 
@@ -189,6 +192,7 @@ void movieDetails(int movieId) {
         cout << "Pelicula no encontrada.\n";
         home();
         return;}
+    string etiqueta = g_strategy->getEtiqueta(movieId);
 
     Usuario* activo = g_sesion.getActivo();
     if (activo != nullptr) {
@@ -196,8 +200,9 @@ void movieDetails(int movieId) {
         g_gestion.guardarEnArchivo();}
 
     cout << "-----------------------------------------------------------------------------------------------------\n"
-         << "Titulo:   " << peli->title << " (" << peli->releaseYear << ")\n"
-         << "Director: " << peli->director << "\n"
+         << "Titulo:   " << peli->title << " (" << peli->releaseYear << ")\n";
+    if (!etiqueta.empty()) cout << "Estado:   " << etiqueta << "\n";
+    cout << "Director: " << peli->director << "\n"
          << "Generos:  ";
     for (size_t i = 0; i < peli->genres.size(); i++) {
         cout << peli->genres[i];
@@ -230,8 +235,9 @@ void resultDisplay(const vector<int>& ids, int pag) {
     for (int i = inicio; i < fin; i++) {
         const Movie* peli = g_catalogo.getById(ids[i]);
         if (peli == nullptr) continue;
+        string etiqueta = g_strategy->getEtiqueta(peli->id);
         cout << "[" << (i - inicio + 1) << "] "
-             << peli->title << " (" << peli->releaseYear << ")\n";}
+             << peli->title << " (" << peli->releaseYear << ") " << etiqueta << "\n";}
 }
 
 void searchResults(const vector<int>& ids, int pag) {
@@ -294,9 +300,7 @@ void home() {
 
     UsuarioHistorial* hist = activo->getHistorial();
 
-    cout << "-----------------------------------------------------------------------------------------------------\n"
-         << "Bienvenido, " << activo->getNombre() << "\n\n";
-
+    cout << "-----------------------------------------------------------------------------------------------------\n";
     cout << "Tus recomendaciones actuales:\n";
     vector<int> recos = g_recomendador->recomendar(*hist, 5);
     if (recos.empty()) {
@@ -390,5 +394,6 @@ int main() {
 
     delete g_buscador;
     delete g_strategy;
+    delete g_strategyBase;
     delete g_recomendador;
     return 0;}

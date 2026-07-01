@@ -24,7 +24,8 @@ set(SEARCH_SOURCES
         search/RankingHibrido.cpp
         search/RelevanciaTextual.cpp
         search/AfinidadConLikes.cpp
-        search/RankingUtils.h)
+        search/RankingUtils.h
+        search/RankingConEtiquetas.h)
 
 # 1) App principal
 add_executable(Proyecto_Progra_3
